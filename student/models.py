@@ -4,7 +4,7 @@ from django.urls import reverse
 class student(models.Model):
    name=models.CharField(max_length=128)
    mail=models.CharField(max_length=64)
-   mobilenumber=models.IntegerField(64)
+   mobilenumber=models.IntegerField()
    def __str__(self):
      return self.name
    def get_absolute_url(self):
