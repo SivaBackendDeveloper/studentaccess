@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<style>
+    #h11{
+    color:green;
+    }
+</style>
+{%extends 'student/base.html'%}
+{%block body_block%}
+
+<marquee style="background-color:lightgreen;">GLOBAL EDX</marquee><hr>
+<center>
+   <h1 id=h11>MORNING 9:30 BATCH</h1>
+   <h1 id=h11>List of All students</h1><hr>
+
+   <ol>
+   {%for student in student_list%}
+   <h2><li> <a href="/{{student.id}}">{{student.name|upper}}</a> </li></h2>
+   {%endfor%}
+   </ol>
+   {%endblock %}
+</center>

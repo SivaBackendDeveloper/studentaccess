@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<style>
+    #h11{
+    color:green;
+    }
+</style>
+{%extends 'student/base.html'%}
+{%block body_block%}
+<marquee style="background-color:lightgreen;">GLOBAL EDX</marquee><hr>
+<center>
+<h1 id=h11>student Information</h1><hr>
+<ol>
+   <h2><li>student Name: {{student.name|upper}}</li></h2>
+   <h2><li>student mail: {{student.mail}}</li></h2>
+   <h2><li>student mobilenumber: {{student.mobilenumber}}</li></h2>
+</ol>
+<a href="/update/{{student.id}}" class='btn btn-warning'>Update</a>
+<a href="/delete/{{student.id}}" class='btn btn-warning'>Delete</a>
+{%endblock %}
+   </center>
